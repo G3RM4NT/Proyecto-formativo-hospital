@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation("com.oracle.database.jdbc:ojdbc6:11.2.0.4")
+    implementation ("com.google.android.material:material:1.7.0")
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.lifecycle.livedata.ktx)

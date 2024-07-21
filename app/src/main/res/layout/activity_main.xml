@@ -14,7 +14,7 @@
         android:layout_height="50dp"
         android:layout_marginBottom="256dp"
         android:backgroundTint="#C146A6"
-        android:text="Ingresas al Sistema"
+        android:text="Ingresar al Sistema"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
