@@ -1,0 +1,4 @@
+package ViewHolderHelpers
+
+class ViewHolderPaciente {
+}
