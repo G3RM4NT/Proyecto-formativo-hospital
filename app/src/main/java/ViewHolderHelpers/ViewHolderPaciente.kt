@@ -15,7 +15,7 @@ class ViewHolderPaciente(view: View): RecyclerView.ViewHolder(view) {
     val NumeroDecama : TextView =view.findViewById(R.id.lblNumeroCama)
     val MedicamentosAsignados: TextView =view.findViewById(R.id.lblMedicamentosAsignados)
     val FechadeIngreso : TextView =view.findViewById(R.id.lblFechaIngreso)
-    val     HoraAplicacion : TextView =view.findViewById(R.id.lblHoradeAplicacion)
+    val HoraAplicacion : TextView =view.findViewById(R.id.lblHoradeAplicacion)
 
     val imgEditar: ImageView = view.findViewById(R.id.btnEditCliente)
     val imgBorrar: ImageView = view.findViewById(R.id.btnDeleteCliente)

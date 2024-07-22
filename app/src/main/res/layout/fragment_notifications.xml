@@ -4,19 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_fondoApp"
     tools:context=".ui.notifications.NotificationsFragment">
+
+    <EditText
+        android:id="@+id/txtFechaIngreso"
+        android:layout_width="178dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Fecha de Ingreso"
+        android:inputType="text"
+        android:text=""
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="415dp" />
+
+    <EditText
+        android:id="@+id/txtEdadPaciente"
+        android:layout_width="166dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Edad"
+        android:inputType="text"
+        android:text=""
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <EditText
+        android:id="@+id/txtMedicamentosAsignados"
+        android:layout_width="166dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Medicamento"
+        android:inputType="text"
+        android:text=""
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="415dp" />
+
+    <EditText
+        android:id="@+id/txtNombrePaciente"
+        android:layout_width="166dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:text=""
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <EditText
+        android:id="@+id/txtNumeroHabitacion"
+        android:layout_width="166dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="# Habitacion"
+        android:inputType="text"
+        android:text=""
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+    <EditText
+        android:id="@+id/txtApellidoPaciente"
+        android:layout_width="178dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Apellido"
+        android:inputType="text"
+        android:text=""
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <EditText
+        android:id="@+id/txtNumerodeCama"
+        android:layout_width="178dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="# Cama"
+        android:inputType="text"
+        android:text=""
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+    <EditText
+        android:id="@+id/txtEnfermadPaciente"
+        android:layout_width="178dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Enfermedad"
+        android:inputType="text"
+        android:text=""
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="253dp" />
 
     <TextView
         android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="371dp"
+        android:layout_height="64dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Agregar Paciente"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="44sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.104" />
+
+    <EditText
+        android:id="@+id/txtHoraAplicacion"
+        android:layout_width="178dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Hora de Aplicacion"
+        android:inputType="text"
+        android:text=""
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="498dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:foregroundTint="#000000"
+        android:text="Agregar Paciente"
+        android:textColor="#000000"
+        app:iconTint="#000000"
+        app:rippleColor="#000000"
+        app:strokeColor="#000000"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="587dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
