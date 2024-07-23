@@ -3,6 +3,7 @@ package Modelo
 import ViewHolderHelpers.ViewHolderPaciente
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import germanydaniel.gonzalezysoriano.hospitalgoodhelp.R
@@ -137,6 +138,39 @@ class AdaptadorPaciente(private var Datos: List<dataClassPaciente>): RecyclerVie
             dialog.show()
 
         }
+
+        holder.imgEditar.setOnClickListener{
+            val context = holder.itemView.context
+
+            val builder = AlertDialog.Builder(context)
+            builder.setTitle("Actualizar")
+            builder.setMessage("¿Desea actualizar la mascota?")
+
+
+            val cuadroTexto = EditText(context)
+            cuadroTexto.setHint(Paciente.NombrePaciente)
+            cuadroTexto.setHint(Paciente.ApellidoPaciente)
+            cuadroTexto.setHint(Paciente.Edad)
+            cuadroTexto.setHint(Paciente.NumeroHabitacion)
+            cuadroTexto.setHint(Paciente.NumeroCama)
+            cuadroTexto.setHint(Paciente.MedicamentoAsignado)
+            cuadroTexto.setHint(Paciente.FechaIngreso)
+            cuadroTexto.setHint(Paciente.HoraAplicacionMed)
+            builder.setView(cuadroTexto)
+
+            //Botones
+            builder.setPositiveButton("Actualizar") { dialog, which ->
+
+            }
+
+            builder.setNegativeButton("Cancelar"){dialog, which ->
+                dialog.dismiss()
+            }
+
+            val dialog = builder.create()
+            dialog.show()
+        }
+
     }
 
 }

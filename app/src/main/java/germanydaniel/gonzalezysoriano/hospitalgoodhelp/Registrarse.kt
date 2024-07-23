@@ -1,15 +1,18 @@
 package germanydaniel.gonzalezysoriano.hospitalgoodhelp
 
 import Modelo.Conexion
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import germanydaniel.gonzalezysoriano.hospitalgoodhelp.R.id.lblPoseesunacuenta
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,6 +20,7 @@ import kotlinx.coroutines.withContext
 import java.util.UUID
 
 class Registrarse : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -32,6 +36,15 @@ class Registrarse : AppCompatActivity() {
         val txtContrasenaUsuario = findViewById<EditText>(R.id.txtContraseñaUsuario)
         val txtCorreoUsuario = findViewById<EditText>(R.id.txtCorreoUsuario)
         val btnIngresar = findViewById<Button>(R.id.btnRegistrarse)
+        val lblPoseesCuenta = findViewById<TextView>(R.id.lblPoseesunacuenta)
+
+        lblPoseesCuenta.setOnClickListener{
+            val cambiarpantalla = Intent(this@Registrarse, Inicio::class.java)
+            startActivity(cambiarpantalla)
+
+        }
+
+
 
 
         fun RegistrarUsuario(){

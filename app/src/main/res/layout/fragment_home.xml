@@ -4,18 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_fondoApp"
+    android:background="@drawable/ic_fondoapp"
     tools:context=".ui.home.HomeFragment">
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="311dp"
+        android:layout_width="0dp"
         android:layout_height="71dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:text="¡Bienvenido!"
         android:textAllCaps="true"
         android:textSize="48sp"
         android:textStyle="bold"
         android:typeface="sans"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="330dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

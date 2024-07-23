@@ -18,7 +18,7 @@
             android:name=".item_card"
             android:exported="false" />
         <activity
-            android:name=".Inicio"
+            android:name=".MainActivity"
             android:exported="false"
             android:label="@string/title_activity_inicio" />
         <activity
@@ -28,7 +28,7 @@
             android:name=".Registrarse"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Inicio"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

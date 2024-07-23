@@ -1,10 +1,12 @@
 package germanydaniel.gonzalezysoriano.hospitalgoodhelp
 
 import Modelo.Conexion
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -30,8 +32,9 @@ class Login : AppCompatActivity() {
         val txtContrasenaLogin = findViewById<EditText>(R.id.txtContrasenaLogin)
         val btnIniciarSesionLogin = findViewById<Button>(R.id.btnIniciarSesion)
 
+
         btnIniciarSesionLogin.setOnClickListener{
-            val pantallaPrincipal = Intent(this, Inicio::class.java)
+            val pantallaPrincipal = Intent(this@Login, Inicio::class.java)
 
             val objConexion = Conexion().cadenaConexion()
 
