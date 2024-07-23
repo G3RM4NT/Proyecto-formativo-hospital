@@ -1,8 +1,11 @@
 package Modelo
 
 import ViewHolderHelpers.ViewHolderPaciente
+import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
+import germanydaniel.gonzalezysoriano.hospitalgoodhelp.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -71,7 +74,7 @@ class AdaptadorPaciente(private var Datos: List<dataClassPaciente>): RecyclerVie
         GlobalScope.launch(Dispatchers.IO) {
             val objConexion = Conexion().cadenaConexion()
 
-            val updatePaciente = objConexion?.prepareStatement("UPDATE Paciente SET Nombre= ?, Apellido = ?, Edad = ?, NumeroHabitacion = ?, NumeroCama = ?, MedicamentoAsignado = ? , FechaIngreso = ?, HoraAplicacionMedicamento = ? WHERE UUID_Paciente = ?")!!
+            val updatePaciente = objConexion?.prepareStatement("UPDATE Paciente SET Nombre = ?, Apellido = ?, Edad = ?, NumeroHabitacion = ?, NumeroCama = ?, MedicamentoAsignado = ? , FechaIngreso = ?, HoraAplicacionMedicamento = ? WHERE UUID_Paciente = ?")!!
             updatePaciente.setString(1, nuevoNombrePaciente)
             updatePaciente.setString(2, nuevoApellidoPaciente)
             updatePaciente.setInt(3, nuevoEdadPaciente)
@@ -96,7 +99,10 @@ class AdaptadorPaciente(private var Datos: List<dataClassPaciente>): RecyclerVie
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderPaciente {
-        //TODO: HOLA
+
+        val vista = LayoutInflater.from(parent.context).inflate(R.layout.activity_item_card, parent, false)
+
+        return ViewHolderPaciente(vista)
 
     }
 
@@ -105,6 +111,32 @@ class AdaptadorPaciente(private var Datos: List<dataClassPaciente>): RecyclerVie
 
     override fun onBindViewHolder(holder: ViewHolderPaciente, position: Int) {
 
+        val Paciente = Datos[position]
+        holder.NombrePaciente.text = Paciente.NombrePaciente
+
+        //todo: clic al icono de eliminar
+        holder.imgBorrar.setOnClickListener {
+
+            //Creamos un Alert Dialog
+            val context = holder.itemView.context
+
+            val builder = AlertDialog.Builder(context)
+            builder.setTitle("Eliminar")
+            builder.setMessage("¿Desea eliminar la mascota?")
+
+            //Botones
+            builder.setPositiveButton("Si") { dialog, which ->
+                EliminarPaciente(Paciente.NombrePaciente, position)
+            }
+
+            builder.setNegativeButton("No"){dialog, which ->
+                dialog.dismiss()
+            }
+
+            val dialog = builder.create()
+            dialog.show()
+
+        }
     }
 
 }

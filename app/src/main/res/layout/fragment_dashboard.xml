@@ -7,7 +7,7 @@
     tools:context=".ui.dashboard.DashboardFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rcvPacientes"
         android:layout_width="395dp"
         android:layout_height="697dp"
         android:layout_marginStart="1dp"
